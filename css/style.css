@@ -60,7 +60,7 @@ canvas {
 
 body {
   text-align: center;
-  background-color: #afdcde;
+  background-color: white; <!-- #afdcde -->
 }
 
 .link1:hover {
@@ -74,7 +74,7 @@ body {
 
   body {
     text-align: center;
-    background-color: #afdcde;
+    background-color: white;
   }
 
   .thmlogo {
@@ -94,7 +94,7 @@ body {
 @media screen and (max-width: 765px) {
   body {
     text-align: center;
-    background-color: #afdcde;
+    background-color: white;
   }
 
   .header1 {
@@ -126,7 +126,7 @@ body {
 
   body {
     text-align: center;
-    background-color: #afdcde;
+    background-color: white;
   }
 
   .thmlogo {
