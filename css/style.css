@@ -58,6 +58,11 @@ canvas {
   filter: hue-rotate(38.8deg);
 }
 
+body {
+  text-align: center;
+  background-color: #afdcde;
+}
+
 .link1:hover {
   color: #fc7a00;
 }
@@ -65,6 +70,11 @@ canvas {
 @media screen and (max-width: 785px) {
   .header1 {
     font-size: 8vw;
+  }
+
+  body {
+    text-align: center;
+    background-color: #afdcde;
   }
 
   .thmlogo {
@@ -112,6 +122,11 @@ canvas {
 @media screen and (min-width: 1390px) {
   .header2 {
     font-size: 1.1vw;
+  }
+
+  body {
+    text-align: center;
+    background-color: #afdcde;
   }
 
   .thmlogo {
