@@ -1,0 +1,22 @@
+# Aaliyan Ahmad
+
+> Personal portfolio of Aaliyan Ahmad, also known as Ibn Ishfaq — a software engineer, founder, product builder and digital creator based in Lahore, Pakistan.
+
+Aaliyan works across backend engineering, web and mobile products, digital systems, Vector Labs, and content creation.
+
+## Portfolio
+
+- [Home](https://aaliyanahmad.tech/): Overview, experience, selected work, services and contact.
+- [GetProof.tech](https://aaliyanahmad.tech/work/getproof): Product case study for GetProof.tech.
+- [TaskConnect](https://aaliyanahmad.tech/work/taskconnect): Final-year project and local task marketplace case study.
+- [ApkaMuaalij](https://aaliyanahmad.tech/work/apkamuaalij): Backend engineering contribution to the ApkaMuaalij healthcare platform.
+- [Dental Clinic](https://aaliyanahmad.tech/work/dental-clinic): Dental clinic web experience.
+- [Finance Manager](https://aaliyanahmad.tech/work/finance-manager): Finance management project.
+- [Dashboards & Internal Systems](https://aaliyanahmad.tech/work/dashboards-internal-systems): Administrative dashboards and internal software systems.
+
+## Profiles
+
+- [GitHub](https://github.com/aaliyanahmad/): Public software projects and repositories.
+- [LinkedIn](https://www.linkedin.com/in/aaliyanahmad/): Professional profile.
+- [Instagram](https://instagram.com/aaliy4n): Creator profile.
+- [TikTok](https://www.tiktok.com/@aaliy4nahmad): Creator profile.
