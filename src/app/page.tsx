@@ -14,7 +14,6 @@ import { socialProfiles } from "@/data/socials";
 import { absoluteUrl } from "@/lib/seo";
 
 export default function Home() {
-  
   const homepageUrl = absoluteUrl("/");
   const personId = homepageUrl ? `${homepageUrl}#person` : undefined;
   const structuredData = {
