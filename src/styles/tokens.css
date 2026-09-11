@@ -1,0 +1,51 @@
+:root {
+  --carbon: #0b0c0e;
+  --carbon-soft: #101215;
+  --surface: #14171a;
+  --surface-raised: #191d21;
+
+  --bone: #eeeae2;
+  --bone-soft: #d8d3ca;
+
+  --muted: #969a9f;
+  --muted-dark: #686d73;
+
+  --line: rgba(255, 255, 255, 0.1);
+  --line-strong: rgba(255, 255, 255, 0.18);
+
+  --copper: #b87952;
+
+  --page-gutter: clamp(1.125rem, 4vw, 1.25rem);
+  --content-width: 90rem;
+  --section-space: 5rem;
+  --header-height: 4.5rem;
+  --radius-sm: 0.25rem;
+
+  --motion-fast: 180ms;
+  --motion-normal: 320ms;
+  --motion-slow: 600ms;
+  --motion-distance-sm: 0.25rem;
+  --motion-distance-md: 1.25rem;
+  --ease-standard: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-emphasized: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out: var(--ease-emphasized);
+
+  --z-content: 10;
+  --z-header: 40;
+  --z-menu: 50;
+}
+
+@media (min-width: 48rem) {
+  :root {
+    --page-gutter: 2rem;
+    --section-space: 7rem;
+    --header-height: 4.75rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  :root {
+    --page-gutter: clamp(3rem, 4vw, 4.5rem);
+    --section-space: clamp(8rem, 10vw, 9rem);
+  }
+}
