@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter_Tight, Newsreader } from "next/font/google";
 
 import { siteConfig } from "@/data/site";
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   metadataBase: getMetadataBase(),
   title: {
     default: defaultSeoTitle,
-    template: `%s — ${siteConfig.name}`,
+    template: `%s | ${siteConfig.name}`,
   },
   description: defaultSeoDescription,
   applicationName: siteConfig.name,
@@ -48,6 +48,16 @@ export const metadata: Metadata = {
   creator: siteConfig.name,
   publisher: siteConfig.name,
   category: "technology",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any", type: "image/x-icon" },
+      { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: [
+      { url: "/apple-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
   keywords: [
     "Aaliyan Ahmad",
     "Ibn Ishfaq",
@@ -86,6 +96,7 @@ export const metadata: Metadata = {
               width: socialImage.width,
               height: socialImage.height,
               alt: socialImage.alt,
+              type: "image/png",
             },
           ],
         }
@@ -97,6 +108,11 @@ export const metadata: Metadata = {
     description: defaultSeoDescription,
     ...(socialImageUrl ? { images: [socialImageUrl] } : {}),
   },
+};
+
+export const viewport: Viewport = {
+  colorScheme: "dark",
+  themeColor: "#11110f",
 };
 
 export default function RootLayout({

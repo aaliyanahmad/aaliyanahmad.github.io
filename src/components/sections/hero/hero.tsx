@@ -37,7 +37,7 @@ export function Hero() {
               {siteConfig.name}
             </p>
             <p className="font-serif text-[clamp(1rem,1.5vw,1.35rem)] italic text-muted">
-              — {siteConfig.nickname}
+              / {siteConfig.nickname}
             </p>
           </div>
 
@@ -56,7 +56,7 @@ export function Hero() {
               {siteConfig.professionalTitles[0]},{" "}
               {siteConfig.professionalTitles[1].toLowerCase()} and{" "}
               {siteConfig.professionalTitles[2].toLowerCase()} based in{" "}
-              {siteConfig.location.label} — building digital products, backend
+              {siteConfig.location.label}, building digital products, backend
               systems and experiences while creating for an audience of{" "}
               {audienceStat?.value} {audienceStat?.label.toLowerCase()}.
             </p>

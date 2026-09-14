@@ -82,6 +82,7 @@ export async function generateMetadata({
                 width: socialImage.width,
                 height: socialImage.height,
                 alt: socialImage.alt,
+                type: "image/png",
               },
             ],
           }
@@ -160,24 +161,82 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   const nextProject = getNextProject(project);
   const canonicalUrl = absoluteUrl(getProjectCaseStudyHref(project));
   const homepageUrl = absoluteUrl("/");
+  const projectId = canonicalUrl ? `${canonicalUrl}#case-study` : undefined;
+  const breadcrumbId = canonicalUrl ? `${canonicalUrl}#breadcrumb` : undefined;
   const projectSchema = {
     "@context": "https://schema.org",
-    "@type": "CreativeWork",
-    name: `${project.title} case study`,
-    description: getProjectSeoDescription(project),
-    ...(canonicalUrl ? { url: canonicalUrl, mainEntityOfPage: canonicalUrl } : {}),
-    author: {
-      "@type": "Person",
-      name: siteConfig.name,
-      ...(homepageUrl ? { url: homepageUrl } : {}),
-    },
-    about: {
-      "@type": "Thing",
-      name: project.title,
-      description: project.description,
-    },
-    genre: getProjectCategoryLabel(project),
-    inLanguage: "en",
+    "@graph": [
+      ...(canonicalUrl
+        ? [
+            {
+              "@type": "WebPage",
+              "@id": canonicalUrl,
+              url: canonicalUrl,
+              name: withSiteName(getProjectSeoTitle(project)),
+              description: getProjectSeoDescription(project),
+              ...(breadcrumbId
+                ? { breadcrumb: { "@id": breadcrumbId } }
+                : {}),
+              ...(projectId ? { mainEntity: { "@id": projectId } } : {}),
+              ...(homepageUrl
+                ? { isPartOf: { "@id": `${homepageUrl}#website` } }
+                : {}),
+              inLanguage: "en",
+            },
+            {
+              "@type": "BreadcrumbList",
+              ...(breadcrumbId ? { "@id": breadcrumbId } : {}),
+              itemListElement: [
+                ...(homepageUrl
+                  ? [
+                      {
+                        "@type": "ListItem",
+                        position: 1,
+                        name: "Home",
+                        item: homepageUrl,
+                      },
+                    ]
+                  : []),
+                {
+                  "@type": "ListItem",
+                  position: homepageUrl ? 2 : 1,
+                  name: project.title,
+                  item: canonicalUrl,
+                },
+              ],
+            },
+          ]
+        : []),
+      {
+        "@type": "CreativeWork",
+        ...(projectId ? { "@id": projectId } : {}),
+        name: `${project.title} case study`,
+        headline: `${project.title} case study`,
+        description: getProjectSeoDescription(project),
+        ...(canonicalUrl
+          ? {
+              url: canonicalUrl,
+              mainEntityOfPage: { "@id": canonicalUrl },
+            }
+          : {}),
+        ...(homepageUrl
+          ? { isPartOf: { "@id": `${homepageUrl}#website` } }
+          : {}),
+        author: {
+          "@type": "Person",
+          ...(homepageUrl ? { "@id": `${homepageUrl}#person` } : {}),
+          name: siteConfig.name,
+          ...(homepageUrl ? { url: homepageUrl } : {}),
+        },
+        about: {
+          "@type": "Thing",
+          name: project.title,
+          description: project.description,
+        },
+        genre: getProjectCategoryLabel(project),
+        inLanguage: "en",
+      },
+    ],
   };
 
   return (

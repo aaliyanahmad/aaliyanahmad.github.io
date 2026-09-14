@@ -32,7 +32,7 @@ const configuredSiteUrl =
 export const defaultSeoTitle = siteConfig.metadata.title;
 export const defaultSeoDescription = siteConfig.metadata.description;
 export const socialImage = {
-  alt: "Aaliyan Ahmad — Software Engineer, Founder and Creator",
+  alt: "Aaliyan Ahmad, Software Engineer, Founder and Creator",
   height: 630,
   path: SOCIAL_IMAGE_PATH,
   width: 1200,
@@ -61,7 +61,7 @@ export function isPreviewDeployment() {
 }
 
 export function getProjectSeoTitle(project: Project) {
-  return project.seoTitle ?? `${project.title} — Project Case Study`;
+  return project.seoTitle ?? `${project.title} | Project Case Study`;
 }
 
 export function getProjectSeoDescription(project: Project) {
@@ -74,5 +74,5 @@ export function getProjectSeoDescription(project: Project) {
 export function withSiteName(title: string) {
   return title.endsWith(siteConfig.name)
     ? title
-    : `${title} — ${siteConfig.name}`;
+    : `${title} | ${siteConfig.name}`;
 }

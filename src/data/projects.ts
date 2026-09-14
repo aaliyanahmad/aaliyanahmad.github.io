@@ -19,7 +19,7 @@ export const projects = [
     role: "Final Year Project / Software Developer",
     description:
       "A client and tasker marketplace designed to connect people who need local odd jobs completed with individuals available to perform those tasks.",
-    seoTitle: "TaskConnect — Marketplace Case Study",
+    seoTitle: "TaskConnect | Marketplace Case Study",
     seoDescription:
       "TaskConnect case study: a final-year client and tasker marketplace developed by Aaliyan Ahmad for connecting local jobs with available taskers.",
     caseStudy: {
@@ -50,7 +50,7 @@ export const projects = [
     displayCategory: "Product",
     status: "shipped",
     description: "A digital product for creating online agreements.",
-    seoTitle: "GetProof.tech — Product Case Study",
+    seoTitle: "GetProof.tech | Product Case Study",
     seoDescription:
       "Case study of GetProof.tech, a digital product for creating online agreements, built and presented by Aaliyan Ahmad.",
     caseStudy: {
@@ -85,7 +85,7 @@ export const projects = [
     role: "Backend Engineer / Backend Development",
     description:
       "Backend and platform systems work contributing to the live ApkaMuaalij healthcare platform across its web platform and mobile application.",
-    seoTitle: "ApkaMuaalij — Backend Engineering Case Study",
+    seoTitle: "ApkaMuaalij | Backend Engineering Case Study",
     seoDescription:
       "Backend engineering case study covering Aaliyan Ahmad's contributions to the ApkaMuaalij healthcare platform across web and mobile systems.",
     caseStudy: {
@@ -122,7 +122,7 @@ export const projects = [
     category: "personal-project",
     displayCategory: "Web Experience",
     description: "A modern dental clinic website and web experience.",
-    seoTitle: "Dental Clinic — Web Experience Case Study",
+    seoTitle: "Dental Clinic | Web Experience Case Study",
     seoDescription:
       "Case study of a modern dental clinic website and web experience developed and presented by Aaliyan Ahmad.",
     caseStudy: {
@@ -145,7 +145,7 @@ export const projects = [
     category: "personal-project",
     displayCategory: "Personal Project",
     description: "A finance management application and project.",
-    seoTitle: "Finance Manager — Application Case Study",
+    seoTitle: "Finance Manager | Application Case Study",
     seoDescription:
       "Case study of Finance Manager, a personal finance management application project by Aaliyan Ahmad.",
     caseStudy: {
@@ -169,7 +169,7 @@ export const projects = [
     displayCategory: "Internal Systems",
     description:
       "A collection of administrative dashboards, internal tools, backend systems and operational interfaces developed for business workflows.",
-    seoTitle: "Dashboards & Internal Systems — Case Study",
+    seoTitle: "Dashboards & Internal Systems | Case Study",
     seoDescription:
       "A grouped case study of administrative dashboards, backend systems and internal operational tools developed by Aaliyan Ahmad.",
     caseStudy: {

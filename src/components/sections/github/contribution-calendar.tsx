@@ -37,7 +37,7 @@ function formatDate(date: string) {
 
 function contributionTitle(day: ContributionDay) {
   const unit = day.contributionCount === 1 ? "contribution" : "contributions";
-  return `${formatDate(day.date)} — ${day.contributionCount} ${unit}`;
+  return `${formatDate(day.date)}: ${day.contributionCount} ${unit}`;
 }
 
 function monthColumn(

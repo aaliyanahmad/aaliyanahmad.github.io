@@ -34,8 +34,8 @@ export const experienceSectionContent = {
     emphasis: "to building them.",
   },
   introduction:
-    "A progression through computer science, production backend work and product building—grounded in the systems behind useful digital experiences.",
-  range: "2022 — Now",
+    "A progression through computer science, production backend work and product building, grounded in the systems behind useful digital experiences.",
+  range: "2022 to Now",
   summary: [
     "Learn the systems.",
     "Work on real ones.",
@@ -48,7 +48,7 @@ export const timelineEntries = [
   {
     id: currentExperience.id,
     type: "work",
-    displayDate: `${experienceStart} — Present`,
+    displayDate: `${experienceStart} to Present`,
     dateTime: currentExperience.startDate,
     organization: currentExperience.company,
     role: currentExperience.title,
@@ -70,7 +70,7 @@ export const timelineEntries = [
   {
     id: computerScienceEducation.id,
     type: "education",
-    displayDate: computerScienceEducation.years.replace("–", " — "),
+    displayDate: computerScienceEducation.years.replace("–", " to "),
     organization: computerScienceEducation.institution,
     role: computerScienceEducation.degree,
     location: computerScienceEducation.location,

@@ -100,7 +100,7 @@ export function TimelineItem({ entry, index }: TimelineItemProps) {
           <p className="mt-8 border-t border-[var(--line)] pt-5 text-xs uppercase tracking-[0.14em] text-muted">
             <span className="text-muted-dark">{entry.reference.label}</span>
             <span aria-hidden="true" className="mx-3 text-copper">
-              —
+              /
             </span>
             <span className="text-bone-soft">{entry.reference.title}</span>
           </p>

@@ -16,15 +16,37 @@ import { absoluteUrl } from "@/lib/seo";
 export default function Home() {
   const homepageUrl = absoluteUrl("/");
   const personId = homepageUrl ? `${homepageUrl}#person` : undefined;
+  const websiteId = homepageUrl ? `${homepageUrl}#website` : undefined;
+  const profilePageId = homepageUrl ? `${homepageUrl}#profile-page` : undefined;
+  const portraitUrl = absoluteUrl(siteConfig.portrait.src);
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
+      ...(homepageUrl && profilePageId
+        ? [
+            {
+              "@type": "ProfilePage",
+              "@id": profilePageId,
+              url: homepageUrl,
+              name: siteConfig.metadata.title,
+              description: siteConfig.metadata.description,
+              mainEntity: personId
+                ? { "@id": personId }
+                : { "@type": "Person", name: siteConfig.name },
+              ...(websiteId ? { isPartOf: { "@id": websiteId } } : {}),
+              inLanguage: "en",
+            },
+          ]
+        : []),
       {
         "@type": "Person",
         ...(personId ? { "@id": personId } : {}),
         name: siteConfig.name,
         alternateName: siteConfig.nickname,
         ...(homepageUrl ? { url: homepageUrl } : {}),
+        description: siteConfig.metadata.description,
+        ...(portraitUrl ? { image: portraitUrl } : {}),
+        ...(profilePageId ? { mainEntityOfPage: { "@id": profilePageId } } : {}),
         jobTitle: siteConfig.professionalTitles[0],
         sameAs: socialProfiles.map((profile) => profile.url),
         address: {
@@ -37,8 +59,9 @@ export default function Home() {
         ? [
             {
               "@type": "WebSite",
-              "@id": `${homepageUrl}#website`,
+              "@id": websiteId,
               name: siteConfig.name,
+              alternateName: ["Aaliyan Ahmad Portfolio", "aaliyanahmad.tech"],
               url: homepageUrl,
               author: personId
                 ? { "@id": personId }

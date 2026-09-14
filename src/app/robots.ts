@@ -13,7 +13,6 @@ export default function robots(): MetadataRoute.Robots {
   }
 
   const sitemapUrl = absoluteUrl("/sitemap.xml");
-  const siteUrl = absoluteUrl("/");
 
   return {
     rules: {
@@ -21,6 +20,5 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
     },
     ...(sitemapUrl ? { sitemap: sitemapUrl } : {}),
-    ...(siteUrl ? { host: siteUrl } : {}),
   };
 }

@@ -3,7 +3,7 @@ import type { CompanyProfile, SiteConfig } from "@/types/portfolio";
 export const siteConfig = {
   name: "Aaliyan Ahmad",
   nickname: "Ibn Ishfaq",
-  url: "https://aaliyanahmad.tech",
+  url: "https://www.aaliyanahmad.tech",
   professionalTitles: [
     "Software Engineer",
     "Founder",
@@ -24,9 +24,9 @@ export const siteConfig = {
     alt: "Portrait of Aaliyan Ahmad",
   },
   metadata: {
-    title: "Aaliyan Ahmad — Software Engineer, Founder & Creator",
+    title: "Aaliyan Ahmad | Software Engineer, Founder & Creator",
     description:
-      "Personal portfolio of Aaliyan Ahmad, also known as Ibn Ishfaq — software engineer, founder, product builder and digital creator based in Lahore, Pakistan.",
+      "Portfolio of Aaliyan Ahmad, also known as Ibn Ishfaq, a software engineer, founder, product builder and digital creator based in Lahore, Pakistan.",
   },
   contact: {
     email: "aaliyanahmad146@gmail.com",
@@ -43,7 +43,7 @@ export const vectorLabs: CompanyProfile = {
   relationship: "Founder",
   status: "Current Venture",
   description:
-    "Vector Labs is the company Aaliyan is building around software, digital products and systems — bringing engineering, design, strategy and execution into one focused practice.",
+    "Vector Labs is the company Aaliyan is building around software, digital products and systems, bringing engineering, design, strategy and execution into one focused practice.",
   portfolioContext:
     "This portfolio documents the individual work. Vector Labs is the larger structure for turning that capability into products and commercial technology work.",
   principle: "Build the system. Not just the screen.",

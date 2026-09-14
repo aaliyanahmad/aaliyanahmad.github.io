@@ -1,4 +1,4 @@
-# Aaliyan Ahmad — Portfolio
+# Aaliyan Ahmad Portfolio
 
 A personal brand and engineering portfolio for Aaliyan Ahmad (Ibn Ishfaq), built on the custom **Carbon Editorial** visual system.
 
@@ -29,9 +29,11 @@ profile and repository information when available.
 
 ## SEO and production URL
 
-The verified canonical origin is centralized as `https://aaliyanahmad.tech` in
+The verified canonical origin is centralized as `https://www.aaliyanahmad.tech` in
 `src/data/site.ts`. `NEXT_PUBLIC_SITE_URL` can override it with another HTTPS
 origin (without a path) from `.env.local` or Vercel Environment Variables.
+If the override is configured in Vercel, keep it set to
+`https://www.aaliyanahmad.tech` so it agrees with the production redirect.
 Canonical URLs, absolute Open Graph image URLs, `robots.txt`, and `sitemap.xml`
 are generated through the same URL helper.
 
@@ -40,6 +42,12 @@ sitemap includes the homepage and every project route from
 `src/data/projects.ts`, while project metadata and CreativeWork structured data
 are generated from that same source. No external service is required to build
 the metadata.
+
+Search-engine favicon links use the stable `/favicon.ico` and
+`/favicon-96x96.png` paths. After a production deployment, submit
+`https://www.aaliyanahmad.tech/sitemap.xml` in Google Search Console and request
+reindexing for the homepage. Search-result favicon updates depend on Google's
+next crawl and are not immediate or guaranteed.
 
 ## EmailJS
 
@@ -64,7 +72,7 @@ buildable when EmailJS is not configured. To enable delivery:
 7. Restrict allowed origins to the local development origin when needed and the
    final Vercel/custom production domain.
 
-Only the EmailJS public key belongs in browser configuration—never add a private
+Only the EmailJS public key belongs in browser configuration. Never add a private
 or access key. If spam becomes a problem, EmailJS reCAPTCHA v2 can be enabled in
 the template later without adding it to the site now.
 
