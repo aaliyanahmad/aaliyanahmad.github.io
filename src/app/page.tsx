@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+
 import { Header } from "@/components/layout/header";
 import { JsonLd } from "@/components/seo/json-ld";
 import { About } from "@/components/sections/about/about";
@@ -12,6 +14,12 @@ import { Work } from "@/components/sections/work/work";
 import { siteConfig } from "@/data/site";
 import { socialProfiles } from "@/data/socials";
 import { absoluteUrl } from "@/lib/seo";
+
+export const metadata: Metadata = {
+  verification: {
+    google: "jPQUdEqw1eSr5LGZ-JHsezWQwwccqmbs9lInbnXEDnY",
+  },
+};
 
 export default function Home() {
   const homepageUrl = absoluteUrl("/");
