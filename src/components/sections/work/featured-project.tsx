@@ -62,9 +62,16 @@ export function FeaturedProject({ index, project }: FeaturedProjectProps) {
               <p className="text-[0.58rem] uppercase tracking-[0.16em] text-muted-dark">
                 Stack
               </p>
-              <p className="mt-2 text-xs uppercase tracking-[0.12em] text-bone-soft">
-                {technologyNames.join(" / ")}
-              </p>
+              <div className="mt-3 flex flex-wrap gap-2">
+                {technologyNames.map((name) => (
+                  <span
+                    className="rounded border border-[var(--line-strong)] bg-surface px-2.5 py-1 text-[0.68rem] tracking-wide text-bone-soft"
+                    key={name}
+                  >
+                    {name}
+                  </span>
+                ))}
+              </div>
             </div>
           ) : null}
 

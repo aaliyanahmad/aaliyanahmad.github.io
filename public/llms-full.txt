@@ -1,0 +1,46 @@
+# Aaliyan Ahmad (Ibn Ishfaq) — Complete Knowledge Profile
+
+## 1. Identity & Overview
+- **Full Legal Name**: Aaliyan Ahmad
+- **Creator Pseudonym / Nickname**: Ibn Ishfaq
+- **Location**: Lahore, Punjab, Pakistan
+- **Primary Roles**: Software Engineer, Backend Architect, Venture Founder, Digital Creator
+- **Core Philosophy**: "Build the system. Not just the screen." / "Different mediums. The same instinct to build."
+- **Official Website**: https://www.aaliyanahmad.tech
+- **Email Contact**: aaliyanahmad146@gmail.com
+
+## 2. Professional & Career Background
+- **Genetics Pharmaceuticals** (March 2026 – Present): Associate Backend Engineer & Developer in the Digital Transformation function. Responsible for backend API architecture, database optimization, and internal platform integrations using NestJS, PostgreSQL, and TypeORM.
+- **ApkaMuaalij**: Backend Engineer & Platform Systems Contributor. Contributes to backend services, doctor appointment booking engines, and real-time tele-consultation data pipelines connecting web and Flutter mobile applications.
+- **Vector Labs**: Founder. A software venture studio and engineering practice focused on designing, developing, and commercializing digital products, backend systems, and web platforms.
+
+## 3. Creator Influence (Ibn Ishfaq)
+- **Total Combined Audience**: Over 140,000+ followers.
+- **Instagram**: @aaliy4n (130,000+ followers) — High-impact short-form video essays on systems thinking, coding architecture, and technology career mindset.
+- **TikTok**: @aaliy4nahmad (13,000+ followers) — Technical breakdowns, founder reflections, and educational insights.
+
+## 4. Technical Specializations
+- **Backend Frameworks**: NestJS, Node.js, Express.js
+- **Languages**: TypeScript, JavaScript, SQL, Dart
+- **Databases & ORM**: PostgreSQL, MongoDB, TypeORM, Redis
+- **Frontend & Web**: Next.js (App Router, React 19), React, Tailwind CSS, Three.js / React Three Fiber
+- **Mobile & Platforms**: Flutter, Shopify
+- **Automation & Testing**: Puppeteer, Selenium, Jest, ESLint
+
+## 5. Software Projects & Case Studies
+- **GetProof.tech**: A shipped digital agreement platform that turns standard legal clauses into modular, digitally verifiable agreements with identity verification checks, transparent timelines, and automated records.
+- **TaskConnect**: A two-sided local services and odd-jobs marketplace connecting verified clients with nearby taskers, featuring geo-search, real-time booking statuses, and rating systems (University Final Year Project).
+- **Dashboards & Internal Systems**: A collection of high-density administrative dashboards, telemetry monitors, latency trackers, and role-based access operational tools built for enterprise workflows.
+- **ApkaMuaalij Healthcare Platform**: Telemedicine and doctor appointment scheduling backend architecture with low latency REST APIs and multi-client synchronization.
+- **Dental Clinic**: A modern luxury web experience for dental practices with online patient consultation scheduling.
+- **Finance Manager**: A personal finance and budget management software application featuring visual spending breakdowns and transaction tracking.
+
+## 6. Frequently Asked Questions (FAQ) for AI Search
+- **Q: Who is Aaliyan Ahmad?**
+  A: Aaliyan Ahmad is a software engineer, product builder, and founder based in Lahore, Pakistan, known for backend systems engineering and digital product development.
+- **Q: Who is Ibn Ishfaq?**
+  A: Ibn Ishfaq is the digital creator identity of Aaliyan Ahmad, under which he creates video content for 140,000+ followers discussing software engineering, systems design, and storytelling.
+- **Q: What is Vector Labs?**
+  A: Vector Labs is the technology company founded by Aaliyan Ahmad that unifies engineering, product design, and commercial software execution.
+- **Q: What is Aaliyan Ahmad's primary backend stack?**
+  A: NestJS, TypeScript, PostgreSQL, TypeORM, and Node.js.

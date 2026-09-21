@@ -10,6 +10,7 @@ import { portfolioStats } from "@/data/socials";
 
 import { AboutPortrait } from "./about-portrait";
 import { IdentitySplit } from "./identity-split";
+import { TechRadar } from "./tech-radar";
 
 export function About() {
   const audienceStat = portfolioStats.find(
@@ -99,6 +100,25 @@ export function About() {
             identities={aboutContent.identities}
             introduction={aboutContent.identityIntroduction}
           />
+        </ScrollReveal>
+
+        <ScrollReveal className="mt-[clamp(5rem,9vw,8rem)]" delay={90}>
+          <div className="border-t border-[var(--line)] pt-12">
+            <div className="flex flex-wrap items-baseline justify-between gap-4">
+              <div>
+                <p className="text-[0.62rem] uppercase tracking-[0.18em] text-copper">
+                  Technical Stack & Capabilities
+                </p>
+                <h3 className="mt-3 text-[clamp(1.8rem,3.5vw,3.2rem)] font-medium tracking-tight text-bone">
+                  Engineering built on robust foundations.
+                </h3>
+              </div>
+              <p className="max-w-md text-sm text-muted">
+                From high-throughput backend APIs to responsive full-stack applications and automated platforms.
+              </p>
+            </div>
+            <TechRadar />
+          </div>
         </ScrollReveal>
 
         <ScrollReveal className="mt-[clamp(4rem,8vw,7rem)]" delay={100}>

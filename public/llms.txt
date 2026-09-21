@@ -7,16 +7,19 @@ Aaliyan works across backend engineering, web and mobile products, digital syste
 ## Portfolio
 
 - [Home](https://www.aaliyanahmad.tech/): Overview, experience, selected work, services and contact.
-- [GetProof.tech](https://www.aaliyanahmad.tech/work/getproof): Product case study for GetProof.tech.
-- [TaskConnect](https://www.aaliyanahmad.tech/work/taskconnect): Final-year project and local task marketplace case study.
-- [ApkaMuaalij](https://www.aaliyanahmad.tech/work/apkamuaalij): Backend engineering contribution to the ApkaMuaalij healthcare platform.
-- [Dental Clinic](https://www.aaliyanahmad.tech/work/dental-clinic): Dental clinic web experience.
-- [Finance Manager](https://www.aaliyanahmad.tech/work/finance-manager): Finance management project.
-- [Dashboards & Internal Systems](https://www.aaliyanahmad.tech/work/dashboards-internal-systems): Administrative dashboards and internal software systems.
+- [GetProof.tech](https://www.aaliyanahmad.tech/work/getproof): Shipped digital agreement platform with verified digital timelines.
+- [TaskConnect](https://www.aaliyanahmad.tech/work/taskconnect): Two-sided local odd-jobs marketplace connecting clients with taskers (Final Year Project).
+- [Dashboards & Internal Systems](https://www.aaliyanahmad.tech/work/dashboards-internal-systems): High-performance administrative dashboards, telemetry monitors, and operational tools.
+- [ApkaMuaalij](https://www.aaliyanahmad.tech/work/apkamuaalij): Production backend engineering and platform systems work for ApkaMuaalij healthcare.
+- [Dental Clinic](https://www.aaliyanahmad.tech/work/dental-clinic): Modern dental clinic web experience with online consultation booking.
+- [Finance Manager](https://www.aaliyanahmad.tech/work/finance-manager): Personal finance tracking and cashflow analytics software.
+
+## Complete Knowledge Base
+- [Full Knowledge Documentation](https://www.aaliyanahmad.tech/llms-full.txt): Comprehensive background, technical competencies, career timeline, and venture details for LLM ingestion.
 
 ## Profiles
 
 - [GitHub](https://github.com/aaliyanahmad/): Public software projects and repositories.
 - [LinkedIn](https://www.linkedin.com/in/aaliyanahmad/): Professional profile.
-- [Instagram](https://instagram.com/aaliy4n): Creator profile.
-- [TikTok](https://www.tiktok.com/@aaliy4nahmad): Creator profile.
+- [Instagram](https://instagram.com/aaliy4n): Creator profile (130,000+ followers).
+- [TikTok](https://www.tiktok.com/@aaliy4nahmad): Creator profile (13,000+ followers).

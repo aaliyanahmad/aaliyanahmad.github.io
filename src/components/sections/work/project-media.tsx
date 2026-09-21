@@ -74,29 +74,55 @@ export function ProjectMedia({ project }: ProjectMediaProps) {
   ];
   const mediaSource = mediaSources[0];
 
+  const domainDisplay =
+    project.links?.find((l) => l.type === "live")?.href.replace(/^https?:\/\//, "").replace(/\/$/, "") ??
+    `${project.slug}.internal`;
+
   return (
-    <figure className={`project-media overflow-hidden border border-[var(--line-strong)] bg-surface ${mediaSource ? "project-media--image" : "project-media--placeholder"}`}>
-      <div className="flex h-9 items-center justify-between border-b border-[var(--line)] px-3 text-[0.52rem] uppercase tracking-[0.16em] text-muted-dark">
-        <span className="flex items-center gap-2">
-          <span className="size-1 bg-muted-dark" />
-          Project preview
+    <figure
+      className={`project-media group/media relative overflow-hidden rounded-md border border-[var(--line-strong)] bg-surface shadow-2xl transition-all duration-500 hover:border-copper/40 hover:shadow-[0_12px_40px_rgba(184,121,82,0.12)] ${
+        mediaSource ? "project-media--image" : "project-media--placeholder"
+      }`}
+    >
+      {/* Browser Window Header */}
+      <div className="flex h-10 items-center justify-between border-b border-[var(--line)] bg-carbon/80 px-4 text-[0.56rem] tracking-[0.12em] text-muted backdrop-blur-sm">
+        {/* macOS Style Traffic Dots */}
+        <div className="flex items-center gap-1.5" aria-hidden="true">
+          <span className="size-2.5 rounded-full bg-red-500/70 transition-opacity group-hover/media:opacity-100" />
+          <span className="size-2.5 rounded-full bg-amber-500/70 transition-opacity group-hover/media:opacity-100" />
+          <span className="size-2.5 rounded-full bg-emerald-500/70 transition-opacity group-hover/media:opacity-100" />
+        </div>
+
+        {/* Browser URL Bar */}
+        <div className="flex max-w-[60%] items-center gap-1.5 rounded bg-surface-raised/80 px-3 py-1 font-mono text-[0.58rem] text-bone-soft/80 border border-[var(--line)]/50">
+          <span className="size-1.5 rounded-full bg-emerald-400" />
+          <span className="truncate">{domainDisplay}</span>
+        </div>
+
+        {/* Project Type Badge */}
+        <span className="hidden uppercase font-semibold tracking-widest text-muted-dark sm:inline text-[0.52rem]">
+          {project.displayCategory ?? project.category}
         </span>
-        <span className="max-w-[55%] truncate">{project.title}</span>
       </div>
 
-      <div className="project-media-stage project-media-grid relative aspect-[16/11] overflow-hidden transition-transform duration-[var(--motion-slow)] ease-[var(--ease-emphasized)]">
+      {/* Main Visual Stage */}
+      <div className="project-media-stage project-media-grid relative aspect-[16/10] overflow-hidden bg-carbon-soft">
         {mediaSource ? (
-          <Image
-            alt={
-              project.coverImageAlt ??
-              `${project.title} project interface preview`
-            }
-            className="object-cover"
-            fill
-            loading="lazy"
-            sizes="(min-width: 1280px) 52vw, (min-width: 768px) 82vw, 100vw"
-            src={mediaSource}
-          />
+          <div className="relative h-full w-full overflow-hidden">
+            <Image
+              alt={
+                project.coverImageAlt ??
+                `${project.title} project interface preview`
+              }
+              className="object-cover object-top transition-transform duration-700 ease-out group-hover/media:scale-[1.03]"
+              fill
+              loading="lazy"
+              sizes="(min-width: 1280px) 52vw, (min-width: 768px) 82vw, 100vw"
+              src={mediaSource}
+            />
+            {/* Subtle Gradient Vignette */}
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-carbon/40 via-transparent to-transparent opacity-60 transition-opacity duration-300 group-hover/media:opacity-20" />
+          </div>
         ) : (
           <div
             aria-label={`Technical diagram representing ${project.title}`}
@@ -110,10 +136,11 @@ export function ProjectMedia({ project }: ProjectMediaProps) {
         )}
       </div>
 
-      <figcaption className="flex items-center justify-between gap-4 border-t border-[var(--line)] px-3 py-3 text-[0.55rem] uppercase tracking-[0.16em] text-muted">
-        <span>{getProjectCategoryLabel(project)}</span>
-        <span>
-          Media / {mediaSources.length > 0 ? `01 of ${String(mediaSources.length).padStart(2, "0")}` : "01"}
+      {/* Footer Caption */}
+      <figcaption className="flex items-center justify-between gap-4 border-t border-[var(--line)] bg-carbon/50 px-4 py-2.5 text-[0.56rem] uppercase tracking-[0.16em] text-muted">
+        <span className="font-medium text-bone-soft">{getProjectCategoryLabel(project)}</span>
+        <span className="text-muted-dark">
+          Preview / {mediaSources.length > 0 ? `01 of ${String(mediaSources.length).padStart(2, "0")}` : "01"}
         </span>
       </figcaption>
     </figure>

@@ -7,6 +7,7 @@ import { creatorContent } from "@/data/creator";
 
 import { AudienceCounter } from "./audience-counter";
 import { BuildCommunicate } from "./build-communicate";
+import { CreatorReelCard, featuredReels } from "./creator-reel-card";
 import { SocialProfileList } from "./social-profile-list";
 
 export function CreatorSection() {
@@ -94,6 +95,30 @@ export function CreatorSection() {
 
         <ScrollReveal className="mt-[clamp(4rem,8vw,7rem)]">
           <SocialProfileList platforms={creatorContent.platforms} />
+        </ScrollReveal>
+
+        <ScrollReveal className="mt-[clamp(5rem,9vw,8rem)]">
+          <div>
+            <div className="flex flex-wrap items-baseline justify-between gap-4 border-b border-[var(--line)] pb-5">
+              <div>
+                <p className="text-[0.62rem] uppercase tracking-[0.18em] text-copper">
+                  Signature Content & Themes
+                </p>
+                <h3 className="mt-2 text-[clamp(1.8rem,3.5vw,3rem)] font-medium tracking-tight text-bone">
+                  Ideas communicated with clarity.
+                </h3>
+              </div>
+              <p className="max-w-md text-sm text-muted">
+                Selected video essays and breakdown topics from Ibn Ishfaq crossing millions of views across Instagram and TikTok.
+              </p>
+            </div>
+
+            <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {featuredReels.map((reel) => (
+                <CreatorReelCard key={reel.id} reel={reel} />
+              ))}
+            </div>
+          </div>
         </ScrollReveal>
 
         <ScrollReveal className="mt-[clamp(4rem,8vw,7rem)]">

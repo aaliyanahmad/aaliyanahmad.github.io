@@ -56,12 +56,83 @@ export default function Home() {
         ...(portraitUrl ? { image: portraitUrl } : {}),
         ...(profilePageId ? { mainEntityOfPage: { "@id": profilePageId } } : {}),
         jobTitle: siteConfig.professionalTitles[0],
+        knowsAbout: [
+          "Backend Engineering",
+          "NestJS",
+          "TypeScript",
+          "PostgreSQL",
+          "TypeORM",
+          "Distributed Systems",
+          "Next.js",
+          "REST APIs",
+          "Content Creation",
+          "Audience Building",
+        ],
+        worksFor: [
+          {
+            "@type": "Organization",
+            name: "Genetics Pharmaceuticals",
+          },
+          {
+            "@type": "Organization",
+            name: "ApkaMuaalij",
+          },
+        ],
+        founder: {
+          "@type": "Organization",
+          name: "Vector Labs",
+        },
         sameAs: socialProfiles.map((profile) => profile.url),
         address: {
           "@type": "PostalAddress",
           addressLocality: siteConfig.location.city,
           addressCountry: siteConfig.location.countryCode,
         },
+      },
+      {
+        "@type": "FAQPage",
+        mainEntity: [
+          {
+            "@type": "Question",
+            name: "Who is Aaliyan Ahmad?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              "text": "Aaliyan Ahmad, also known as Ibn Ishfaq, is a Software Engineer, Founder of Vector Labs, and Digital Creator based in Lahore, Pakistan. He specializes in backend systems (NestJS, PostgreSQL, TypeORM), APIs, and digital products.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "What is Vector Labs?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              "text": "Vector Labs is the software and digital products company founded by Aaliyan Ahmad, uniting backend engineering, design, and commercial execution.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Who is Ibn Ishfaq?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              "text": "Ibn Ishfaq is the creator identity of Aaliyan Ahmad, communicating ideas on systems thinking, tech careers, and storytelling to an audience of over 140,000 followers across Instagram and TikTok.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "What is Aaliyan Ahmad's role at ApkaMuaalij?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              "text": "Aaliyan Ahmad contributes as a Backend Engineer at ApkaMuaalij, developing and maintaining production backend systems, REST APIs, and database architectures supporting telemedicine and clinic booking.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "What are Aaliyan Ahmad's featured software projects?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              "text": "Key projects include GetProof.tech (an online agreement platform), TaskConnect (a two-sided odd-jobs marketplace), high-performance enterprise dashboards and telemetry systems, and production backend platform work for ApkaMuaalij.",
+            },
+          },
+        ],
       },
       ...(homepageUrl
         ? [
